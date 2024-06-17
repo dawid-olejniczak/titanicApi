@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -50,16 +49,16 @@ class ModelTrainer:
         self.data = data
         self.target_name = target_name
         self.models = {
-            "LogisticRegression": LogisticRegression(max_iter=1000),
-            "DecisionTree": DecisionTreeClassifier(),
-            "RandomForest": RandomForestClassifier(),
-            "SVM": SVC(),
-            "KNN": KNeighborsClassifier(),
-            "GradientBoosting": GradientBoostingClassifier(),
-            "AdaBoost": AdaBoostClassifier(),
-            "GaussianNaiveBayes": GaussianNB(),
-            "StochasticGradientDescent": SGDClassifier(),
-            "XGBoost": XGBClassifier(use_label_encoder=False, eval_metric='mlogloss'),
+            "logisticregression": LogisticRegression(max_iter=1000),
+            "decisiontree": DecisionTreeClassifier(),
+            "randomforest": RandomForestClassifier(),
+            "svm": SVC(),
+            "knn": KNeighborsClassifier(),
+            "gradientboosting": GradientBoostingClassifier(),
+            "adaboost": AdaBoostClassifier(),
+            "gaussiannaivebayes": GaussianNB(),
+            "stochasticgradientdescent": SGDClassifier(),
+            "xgboost": XGBClassifier(use_label_encoder=False, eval_metric='mlogloss'),
         }
         self.results = {}
 
