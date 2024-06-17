@@ -34,7 +34,6 @@ async def predict(model: str, favc: int, fcvc: int, ncp: int, caec: int, ch2o: i
                  'TUE': [tue],
                  'MTRANS': [mtrans]}
     selected_model = trainer.get_model(model)
-    return {"message": selected_model}
     data_df = pd.DataFrame(data_dict)
     prediction = selected_model.predict(data_df)
     prediction_numeric = prediction.tolist()[0]
